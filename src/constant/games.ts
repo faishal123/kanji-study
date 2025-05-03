@@ -1,4 +1,18 @@
 export const games = {
+  flashcardHiraganaCharacters: {
+    name: "ひらがなフラッシュカード",
+    englishName: "Hiragana Flashcards",
+    description: "ひらがなをフラッシュカードで学びましょう。",
+    englishDescription: "Learn Hiragana through flashcards.",
+    url: "/flashcard-hiragana",
+  },
+  flashcardKatakanaCharacters: {
+    name: "カタカナフラッシュカード",
+    englishName: "Katakana Flashcards",
+    description: "カタカナをフラッシュカードで学びましょう。",
+    englishDescription: "Learn Katakana through flashcards.",
+    url: "/flashcard-katakana",
+  },
   flashcard: {
     name: "フラッシュカード",
     englishName: "Flashcard",
@@ -13,20 +27,6 @@ export const games = {
       { name: "JLPT N1", url: "/flashcard/jlpt-1" },
       // { name: "Jouyou", url: "/flashcard/jouyou" },
     ],
-  },
-  flashcardHiraganaCharacters: {
-    name: "ひらがなフラッシュカード",
-    englishName: "Hiragana Flashcards",
-    description: "ひらがなをフラッシュカードで学びましょう。",
-    englishDescription: "Learn Hiragana through flashcards.",
-    url: "/flashcard-hiragana",
-  },
-  flashcardKatakanaCharacters: {
-    name: "カタカナフラッシュカード",
-    englishName: "Katakana Flashcards",
-    description: "カタカナをフラッシュカードで学びましょう。",
-    englishDescription: "Learn Katakana through flashcards.",
-    url: "/flashcard-katakana",
   },
   // kanjiQuiz: {
   //   name: "漢字クイズ",
