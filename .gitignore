@@ -42,3 +42,4 @@ next-env.d.ts
 
 json-dictionary/
 src/app/api/upload/
+src/app/api/upload-kanji-details/

@@ -7,11 +7,14 @@ import { useState } from "react";
 import { CurrentQuestionType } from "@/app/flashcard/[slug]/page";
 import { partOfSpeech } from "@/constant/partOfSpeech";
 import { BackButton } from "@/components/atoms/backbutton";
+import { KanjiDetailsContainer } from "@/components/molecules/kanjiDetailsContainer";
 
 export const Flashcard = ({
   questions,
+  level,
 }: {
   questions: CurrentQuestionType[];
+  level: string;
 }) => {
   const [state, setState] = useState({
     currentQuestion: 0,
@@ -25,7 +28,11 @@ export const Flashcard = ({
   return (
     <CenteredPageWrapper>
       <BackButton />
-      <div className="text-5xl font-bold">{currentQuestion?.kanji}</div>
+      <div className="text-5xl font-bold">
+        <KanjiDetailsContainer level={level} showPopover={state?.showAnswers}>
+          {currentQuestion?.kanji}
+        </KanjiDetailsContainer>
+      </div>
       <Collapse open={state?.showAnswers}>
         <div className="pt-3 flex flex-col gap-1">
           {currentQuestion?.sense?.map((sense, i) => (

@@ -110,7 +110,7 @@ export default async function FlashcardPage({
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      {data && <Flashcard questions={questions} />}
+      {data && <Flashcard level={slug} questions={questions} />}
     </Suspense>
   );
 }
