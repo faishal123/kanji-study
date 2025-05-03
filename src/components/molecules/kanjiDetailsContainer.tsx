@@ -64,6 +64,7 @@ const SingleKanji = ({
   showPopover: boolean;
   level: string;
 }) => {
+  console.log({ children, level, showPopover }, "siniiii");
   return (
     <Popover open={showPopover ? undefined : false}>
       <PopoverTrigger asChild>

@@ -2,6 +2,10 @@ import { Flashcard } from "@/components/pages/Flashcard";
 import { createClient } from "@supabase/supabase-js";
 import { Suspense } from "react";
 import { Kanji } from "@/models/kanji";
+import {
+  generateUniqueRandomNumbers,
+  generateRandomNumbers,
+} from "@/utils/common";
 
 const databaseKey: Record<string, string> = {
   "jlpt-5": "n5-only-words",
@@ -10,25 +14,8 @@ const databaseKey: Record<string, string> = {
   "jlpt-2": "n2-only-words",
   "jlpt-1": "n1-only-words",
 };
-const generateUniqueRandomNumbers = (max: number, count: number): number[] => {
-  const numbers = new Set<number>();
-  while (numbers.size < count) {
-    const randomNumber = Math.floor(Math.random() * max) + 1;
-    numbers.add(randomNumber);
-  }
-  return Array.from(numbers);
-};
 
-const generateRandomNumbers = (max: number, count: number): number[] => {
-  const numbers = [];
-  while (numbers.length < count) {
-    const randomNumber = Math.floor(Math.random() * max) + 1;
-    numbers.push(randomNumber);
-  }
-  return numbers;
-};
-
-export type CurrentQuestionType = {
+export type KanjiQuestionType = {
   kanji: string;
   kana: Kanji["kana"];
   answers: {
@@ -75,7 +62,7 @@ export default async function FlashcardPage({
   const questionsRaw = divideQuestions(data || []);
 
   const questions = questionsRaw?.map((questionRaw, parentIndex) =>
-    questionRaw?.reduce<CurrentQuestionType>(
+    questionRaw?.reduce<KanjiQuestionType>(
       (a, c, i) => {
         const currentIndex = i + 1;
         if (currentIndex === correctIndexes[parentIndex]) {

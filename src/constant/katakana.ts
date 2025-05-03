@@ -182,11 +182,11 @@ export const katakanaToRomaji: { [key: string]: string } = {
   プ: "pu",
   ペ: "pe",
   ポ: "po",
-  ッ: "small tsu",
-  ャ: "small ya",
-  ュ: "small yu",
-  ョ: "small yo",
-  ー: "long vowel",
+  ッ: "tsu",
+  ャ: "ya",
+  ュ: "yu",
+  ョ: "yo",
+  ー: "-",
   キャ: "kya",
   キュ: "kyu",
   キョ: "kyo",
@@ -227,4 +227,13 @@ export const romajiToKatakana: { [key: string]: string } = Object.fromEntries(
     romaji,
     katakana,
   ])
+);
+
+export const readableKatakana = Object.keys(katakanaToRomaji).filter(
+  (katakana) =>
+    katakana !== "ッ" &&
+    katakana !== "ャ" &&
+    katakana !== "ュ" &&
+    katakana !== "ョ" &&
+    katakana !== "ー"
 );

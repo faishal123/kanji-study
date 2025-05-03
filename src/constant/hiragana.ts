@@ -228,3 +228,12 @@ export const romajiToHiragana: { [key: string]: string } = Object.fromEntries(
     hiragana,
   ])
 );
+
+export const readableHiragana = Object.keys(hiraganaToRomaji).filter(
+  (hiragana) =>
+    hiragana !== "っ" &&
+    hiragana !== "ゃ" &&
+    hiragana !== "ゅ" &&
+    hiragana !== "ょ" &&
+    hiragana !== "ー"
+);
