@@ -49,15 +49,12 @@ export const generateNeighboringNumbers = (
 
 export const useGenerateHiraganaOrKatakanaQuestions = ({
   dataset,
-  readableData,
   japaneseToRomaji,
 }: {
   dataset: string[];
-  readableData: string[];
   japaneseToRomaji: { [key: string]: string };
 }) => {
   const datasetLength = dataset.length;
-
   const randomNumbers = generateUniqueRandomNumbers(datasetLength, 10);
 
   const questions: FlashcardQuestionType[] = randomNumbers?.map((dataIndex) => {
@@ -70,10 +67,12 @@ export const useGenerateHiraganaOrKatakanaQuestions = ({
     const answersShuffled = shuffleArray(answersIndexes);
 
     return {
-      question: readableData[actualDataIndex],
+      index: actualDataIndex,
+      question: dataset[actualDataIndex],
       answers: answersShuffled.map((answerIndex) => ({
-        text: japaneseToRomaji[readableData?.[answerIndex]],
+        text: japaneseToRomaji[dataset?.[answerIndex]],
         isCorrect: answerIndex === actualDataIndex,
+        index: answerIndex,
       })),
     };
   });

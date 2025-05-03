@@ -15,10 +15,12 @@ export const Flashcard = ({
     <>
       <FlashcardTemplate
         questions={questions?.map((question) => ({
+          index: question?.index,
           question: question?.kanji,
           answers: question?.answers?.map((answer) => ({
             text: answer?.kana,
             isCorrect: answer?.isCorrect,
+            index: answer?.index,
           })),
           translations: question?.sense?.map((sense) => ({
             partOfSpeech: sense?.partOfSpeech,

@@ -9,10 +9,12 @@ import { BackButton } from "@/components/atoms/backbutton";
 import { ReactNode } from "react";
 
 export type FlashcardQuestionType = {
+  index?: number;
   question: string;
   answers: {
     text: string;
     isCorrect: boolean;
+    index?: number;
   }[];
   translations?: {
     partOfSpeech: string[];

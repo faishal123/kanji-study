@@ -18,9 +18,11 @@ const databaseKey: Record<string, string> = {
 export type KanjiQuestionType = {
   kanji: string;
   kana: Kanji["kana"];
+  index?: number;
   answers: {
     kana: string;
     isCorrect: boolean;
+    index?: number;
   }[];
   sense: Kanji["sense"];
 };
@@ -68,6 +70,7 @@ export default async function FlashcardPage({
         if (currentIndex === correctIndexes[parentIndex]) {
           return {
             ...a,
+            index: c?.id,
             kanji: c?.kanji,
             sense: c?.sense,
             kana: c?.kana,
@@ -75,6 +78,7 @@ export default async function FlashcardPage({
               ...a?.answers,
               {
                 kana: c?.kana?.[0]?.text,
+                index: c?.id,
                 isCorrect: true,
               },
             ],
@@ -86,6 +90,7 @@ export default async function FlashcardPage({
             ...a?.answers,
             {
               kana: c?.kana?.[0]?.text,
+              index: c?.id,
               isCorrect: false,
             },
           ],

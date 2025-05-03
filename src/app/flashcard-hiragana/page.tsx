@@ -2,11 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useGenerateHiraganaOrKatakanaQuestions } from "@/utils/common";
-import {
-  hiraganaOnly,
-  readableHiragana,
-  hiraganaToRomaji,
-} from "@/constant/hiragana";
+import { readableHiragana, hiraganaToRomaji } from "@/constant/hiragana";
 import { FlashcardTemplate } from "@/components/organism/flashcardTemplate";
 
 const FlashcardHiragana = () => {
@@ -16,8 +12,7 @@ const FlashcardHiragana = () => {
   }, []);
 
   const questions = useGenerateHiraganaOrKatakanaQuestions({
-    dataset: hiraganaOnly,
-    readableData: readableHiragana,
+    dataset: readableHiragana,
     japaneseToRomaji: hiraganaToRomaji,
   });
 
