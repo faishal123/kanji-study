@@ -8,11 +8,11 @@ import {
 } from "@/utils/common";
 
 const databaseKey: Record<string, string> = {
-  "jlpt-5": "n5-only-words",
-  "jlpt-4": "n4-only-words",
-  "jlpt-3": "n3-only-words",
-  "jlpt-2": "n2-only-words",
-  "jlpt-1": "n1-only-words",
+  "jlpt-5": "n5-only-common-words",
+  "jlpt-4": "n4-only-common-words",
+  "jlpt-3": "n3-only-common-words",
+  "jlpt-2": "n2-only-common-words",
+  "jlpt-1": "n1-only-common-words",
 };
 
 export type KanjiQuestionType = {
