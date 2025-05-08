@@ -16,6 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Kanji Study",
   description: "Kanji Study App (a work in progress by Faishal Abdur Rahman)",
+	manifest: "/manifest.json",
 };
 
 export default function RootLayout({
