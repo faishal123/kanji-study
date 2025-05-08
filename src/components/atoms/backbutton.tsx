@@ -1,5 +1,5 @@
 "use client";
-
+import { useState, useEffect } from "react";
 import { ArrowLeft } from "@/icons/arrow-left";
 import { Button } from "./button";
 import { useTheme } from "next-themes";
@@ -8,6 +8,14 @@ import { useRouter } from "next/navigation";
 export const BackButton = () => {
   const router = useRouter();
   const { resolvedTheme } = useTheme();
+  const [rendered, setRendered] = useState(false);
+
+  useEffect(() => {
+    setRendered(true);
+  }, []);
+
+  if (!rendered) return null;
+  
   return (
     <Button
       className="!p-3 !w-[unset] !rounded-full"
@@ -18,7 +26,7 @@ export const BackButton = () => {
       }}
     >
       <ArrowLeft
-        color={resolvedTheme === "dark" ? "#ffffff" : '#171717'}
+        color={resolvedTheme === "dark" ? "#ffffff" : "#171717"}
         width={24}
         height={24}
       />

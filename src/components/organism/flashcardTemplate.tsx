@@ -97,8 +97,13 @@ export const FlashcardTemplate = ({
                 setState((prev) => ({
                   ...prev,
                   showAnswers: false,
-                  currentQuestion: prev.currentQuestion + 1,
                 }));
+                setTimeout(() => {
+                  setState((prev) => ({
+                    ...prev,
+                    currentQuestion: prev.currentQuestion + 1,
+                  }));
+                }, 150);
               }
             }}
           >
