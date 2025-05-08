@@ -46,6 +46,7 @@ export const Button = ({
     items-center justify-center shadow-sm border border-gray-100 
     transition-all rounded-lg p-5
     group-hover:shadow-lg
+    dark:border-gray-700
     focus:outline-none
     ${className}
   `;

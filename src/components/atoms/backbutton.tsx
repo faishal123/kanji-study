@@ -8,7 +8,6 @@ import { useRouter } from "next/navigation";
 export const BackButton = () => {
   const router = useRouter();
   const { resolvedTheme } = useTheme();
-  console.log("sini oi", resolvedTheme);
   return (
     <Button
       className="!p-3 !w-[unset] !rounded-full"
@@ -19,7 +18,7 @@ export const BackButton = () => {
       }}
     >
       <ArrowLeft
-        color={resolvedTheme === "dark" ? "white" : undefined}
+        color={resolvedTheme === "dark" ? "#ffffff" : '#171717'}
         width={24}
         height={24}
       />

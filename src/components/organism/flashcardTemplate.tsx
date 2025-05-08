@@ -71,8 +71,8 @@ export const FlashcardTemplate = ({
             className={
               state?.showAnswers
                 ? item.isCorrect
-                  ? "bg-green-100"
-                  : "bg-red-100"
+                  ? "bg-green-100 dark:bg-[#12ff1220]"
+                  : "bg-red-100 dark:bg-[#ff232320]"
                 : ""
             }
             type="button"
