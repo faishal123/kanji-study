@@ -15,7 +15,7 @@ export const games = {
   },
   flashcard: {
     name: "漢字フラッシュカード",
-    englishName: "KanjiFlashcard",
+    englishName: "Kanji Flashcard",
     description: "フラッシュカードで様々なレベルの漢字を学びましょう。",
     englishDescription: "Learn kanji at various levels using flashcards.",
     url: "/flashcard",
