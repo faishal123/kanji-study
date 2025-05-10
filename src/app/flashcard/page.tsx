@@ -20,7 +20,7 @@ export default function FlashcardPage() {
             Choose your level
           </div>
         </div>
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(125px,1fr))] gap-x-5 gap-y-2">
+        <div className="grid gap-x-5 gap-y-2" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(125px, 1fr))' }}>
           {games.flashcard.levels.map((level) => (
             <Button type="link" key={level.name} href={level.url}>
               {level.name}

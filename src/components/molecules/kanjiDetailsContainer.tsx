@@ -69,7 +69,7 @@ const SingleKanji = ({
       <PopoverTrigger asChild>
         <span className="cursor-pointer">{children}</span>
       </PopoverTrigger>
-      <PopoverContent className="w-[100vw] max-w-72">
+      <PopoverContent className="max-w-72" style={{ width: '100vw' }}>
         <SingleKanjiDetail level={level}>{children}</SingleKanjiDetail>
       </PopoverContent>
     </Popover>

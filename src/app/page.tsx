@@ -7,7 +7,7 @@ const KanjiList = () => {
   return (
     <CenteredPageWrapper>
       <div className="text-4xl font-bold">ようこそ！</div>
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-x-5 gap-y-2 items-stretch mt-5">
+      <div className="grid gap-x-5 gap-y-2 items-stretch mt-5" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
         {Object.values(games).map((game) => (
           <Button key={game.name} type="link" href={game.url}>
             <div>

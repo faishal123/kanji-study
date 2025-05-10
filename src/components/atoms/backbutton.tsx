@@ -18,7 +18,7 @@ export const BackButton = () => {
   
   return (
     <Button
-      className="!p-3 !w-[unset] !rounded-full"
+      className="!p-3 !rounded-full w-unset-important"
       containerClassName="!w-[unset] mb-3"
       type="button"
       onClick={() => {
