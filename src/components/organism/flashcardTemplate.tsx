@@ -5,8 +5,11 @@ import { CenteredPageWrapper } from "@/components/atoms/centeredPageWrapper";
 import { Collapse } from "@/components/atoms/collapse";
 import { useState } from "react";
 import { partOfSpeech } from "@/constant/partOfSpeech";
+import { cn } from "@/lib/utils";
+import { useQuestionFont } from "../context/question-font-context";
 import { BackButton } from "@/components/atoms/backbutton";
 import { ReactNode } from "react";
+import { FontVariables } from "@/constant/fonts";
 
 export type FlashcardQuestionType = {
   index?: number;
@@ -35,13 +38,18 @@ export const FlashcardTemplate = ({
     currentQuestion: 0,
     showAnswers: false,
   });
+
+  const { questionFont } = useQuestionFont();
+
+  const questionFontClass = `font-[${FontVariables[questionFont]}]`;
+
   const currentQuestion = questions[state?.currentQuestion];
   const isAtLastQuestion = state?.currentQuestion + 1 === questions.length;
 
   return (
     <CenteredPageWrapper>
       <BackButton />
-      <div className="text-5xl font-bold">
+      <div className={cn("text-7xl", questionFontClass)}>
         {QuestionRenderer(currentQuestion?.question, state?.showAnswers)}
       </div>
       {!!currentQuestion?.translations?.length && (

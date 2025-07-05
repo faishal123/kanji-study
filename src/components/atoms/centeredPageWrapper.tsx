@@ -1,3 +1,4 @@
+import { QuestionFontToggle } from "./questionFontToggle";
 import { ThemeToggle } from "./themeToggle";
 
 export const CenteredPageWrapper = ({
@@ -11,7 +12,10 @@ export const CenteredPageWrapper = ({
 }) => {
   return (
     <div className="p-5 min-h-[100vh] flex flex-col items-end">
-      <ThemeToggle />
+      <div className="flex gap-2 items-center">
+        <QuestionFontToggle />
+        <ThemeToggle />
+      </div>
       <div
         className={`flex-1 flex flex-col gap-2 w-full items-center justify-center px-5 py-15 ${className}`}
       >
