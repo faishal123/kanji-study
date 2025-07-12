@@ -18,6 +18,7 @@ const notoSerif = Noto_Serif_JP({
   variable: '--font-noto-serif-jp',
   display: 'swap',
   subsets: ['latin'],
+  preload: true
 })
 
 const kleeOne = Klee_One({
@@ -25,6 +26,7 @@ const kleeOne = Klee_One({
   variable: "--font-klee-one",
   display: 'swap',
   subsets: ['latin'],
+  preload: true
 })
 
 const newTegomin = New_Tegomin({
@@ -32,6 +34,7 @@ const newTegomin = New_Tegomin({
   weight: ['400'],
   display: 'swap',
   subsets: ['latin'],
+  preload: true
 });
 
 const shipporiMincho = Shippori_Mincho({
@@ -39,6 +42,7 @@ const shipporiMincho = Shippori_Mincho({
   weight: ['400', '500', '600', '700', '800'],
   display: 'swap',
   subsets: ['latin'],
+  preload: true
 });
 
 const hinaMincho = Hina_Mincho({
@@ -46,6 +50,7 @@ const hinaMincho = Hina_Mincho({
   weight: ['400'],
   display: 'swap',
   subsets: ['latin'],
+  preload: true
 });
 
 
