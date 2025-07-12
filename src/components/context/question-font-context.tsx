@@ -14,7 +14,7 @@ const QuestionFontContext = createContext<{
 export const useQuestionFont = () => useContext(QuestionFontContext);
 
 export const QuestionFontProvider = ({ children }: { children: ReactNode }) => {
-    const [questionFont, setQuestionFont] = useState(Fonts.Klee_One as string)
+    const [questionFont, setQuestionFont] = useState(Fonts.Hina_Mincho as string)
     return <QuestionFontContext.Provider value={{
         questionFont,
         setQuestionFont

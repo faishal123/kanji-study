@@ -8,6 +8,11 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-hina-mincho: var(--font-hina-mincho);
+  --font-klee-one: var(--font-klee-one);
+  --font-new-tegomin: var(--font-new-tegomin);
+  --font-shippori-mincho: var(--font-shippori-mincho);
+  --font-noto-serif-jp: var(--font-noto-serif-jp);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -116,6 +121,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }

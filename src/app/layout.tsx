@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Noto_Serif_JP, Klee_One, New_Tegomin, Shippori_Mincho } from "next/font/google";
+import { Geist, Geist_Mono, Noto_Serif_JP, Klee_One, New_Tegomin, Shippori_Mincho, Hina_Mincho } from "next/font/google";
 import "./globals.css";
+import { cn } from "@/lib/utils";
 import { Providers } from "@/components/atoms/providers";
 
 const geistSans = Geist({
@@ -40,6 +41,14 @@ const shipporiMincho = Shippori_Mincho({
   subsets: ['latin'],
 });
 
+const hinaMincho = Hina_Mincho({
+  variable: "--font-hina-mincho",
+  weight: ['400'],
+  display: 'swap',
+  subsets: ['latin'],
+});
+
+
 export const metadata: Metadata = {
   title: "Kanji Study",
   description: "Kanji Study App (a work in progress by Faishal Abdur Rahman)",
@@ -54,7 +63,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${kleeOne.variable} ${newTegomin.variable} ${shipporiMincho.variable} ${notoSerif.variable} antialiased`}
+        className={cn(
+          "antialiased",
+          geistSans.variable,
+          geistMono.variable,
+          kleeOne.variable,
+          newTegomin.variable,
+          shipporiMincho.variable,
+          hinaMincho.variable,
+          notoSerif.variable,
+        )}
       >
         <Providers>{children}</Providers>
       </body>

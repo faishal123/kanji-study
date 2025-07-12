@@ -41,7 +41,7 @@ export const FlashcardTemplate = ({
 
   const { questionFont } = useQuestionFont();
 
-  const questionFontClass = `font-[${FontVariables[questionFont]}]`;
+  const questionFontClass = FontVariables[questionFont];
 
   const currentQuestion = questions[state?.currentQuestion];
   const isAtLastQuestion = state?.currentQuestion + 1 === questions.length;
