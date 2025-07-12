@@ -4,6 +4,8 @@ export enum Fonts {
   New_Tegomin = "New Tegomin",
   Shippori_Mincho = "Shippori Mincho",
   Hina_Mincho = "Hina Mincho",
+  Zen_Old_Mincho = "Zen Old Mincho",
+  Sawarabi_Mincho = "Sawarabi Mincho",
 }
 
 export const FontVariables: Record<string, string> = {
@@ -12,4 +14,6 @@ export const FontVariables: Record<string, string> = {
   [Fonts.New_Tegomin]: "font-new-tegomin",
   [Fonts.Shippori_Mincho]: "font-shippori-mincho",
   [Fonts.Hina_Mincho]: "font-hina-mincho",
+  [Fonts.Zen_Old_Mincho]: "font-zen-old-mincho",
+  [Fonts.Sawarabi_Mincho]: "font-sawarabi-mincho",
 }

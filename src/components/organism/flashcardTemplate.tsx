@@ -9,7 +9,6 @@ import { cn } from "@/lib/utils";
 import { useQuestionFont } from "../context/question-font-context";
 import { BackButton } from "@/components/atoms/backbutton";
 import { ReactNode } from "react";
-import { FontVariables } from "@/constant/fonts";
 
 export type FlashcardQuestionType = {
   index?: number;
@@ -39,9 +38,7 @@ export const FlashcardTemplate = ({
     showAnswers: false,
   });
 
-  const { questionFont } = useQuestionFont();
-
-  const questionFontClass = FontVariables[questionFont];
+  const { questionFontClass } = useQuestionFont();
 
   const currentQuestion = questions[state?.currentQuestion];
   const isAtLastQuestion = state?.currentQuestion + 1 === questions.length;

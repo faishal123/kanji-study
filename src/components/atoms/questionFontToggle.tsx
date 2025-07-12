@@ -26,7 +26,7 @@ export const QuestionFontToggle = () => {
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
                 <Button variant="outline">
-                    <span>Question font: {questionFont}</span>
+                    <span>Font: {questionFont}</span>
                 </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">

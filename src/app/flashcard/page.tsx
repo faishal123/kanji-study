@@ -1,21 +1,26 @@
+"use client";
+
 import { BackButton } from "@/components/atoms/backbutton";
 import { Button } from "@/components/atoms/button";
 import { CenteredPageWrapper } from "@/components/atoms/centeredPageWrapper";
+import { useQuestionFont } from "@/components/context/question-font-context";
 import { games } from "@/constant/games";
+import { cn } from "@/lib/utils";
 
 export default function FlashcardPage() {
+  const { questionFontClass } = useQuestionFont()
   return (
     <CenteredPageWrapper>
       <BackButton />
       <div>
-        <div className="text-4xl font-bold">{games.flashcard.name}</div>
+        <div className={cn(["text-4xl font-bold", questionFontClass])}>{games.flashcard.name}</div>
         <div className="text-sm font-light text-gray-500">
           {games.flashcard.englishName}
         </div>
       </div>
       <div className="mt-4">
         <div>
-          <div className="text-xl font-bold">レベルを選択してください</div>
+          <div className={cn(["text-xl font-bold", questionFontClass])}>レベルを選択してください</div>
           <div className="text-sm font-light text-gray-500">
             Choose your level
           </div>

@@ -2,22 +2,25 @@
 import { Button } from "@/components/atoms/button";
 import { CenteredPageWrapper } from "@/components/atoms/centeredPageWrapper";
 import { games } from "@/constant/games";
+import { useQuestionFont } from "@/components/context/question-font-context";
+import { cn } from "@/lib/utils";
 
 const KanjiList = () => {
+  const { questionFontClass } = useQuestionFont()
   return (
     <CenteredPageWrapper>
-      <div className="text-4xl font-bold">ようこそ！</div>
+      <div className={cn(["text-4xl font-bold", questionFontClass])}>ようこそ！</div>
       <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-x-5 gap-y-2 items-stretch mt-5">
         {Object.values(games).map((game) => (
           <Button key={game.name} type="link" href={game.url}>
             <div>
-              <div className="text-2xl font-bold">{game.name}</div>
+              <div className={cn(["text-2xl font-bold", questionFontClass])}>{game.name}</div>
               <div className="text-sm font-light text-gray-500">
                 {game.englishName}
               </div>
             </div>
             <div>
-              <div className="text-md font-bold">{game.description}</div>
+              <div className={cn([questionFontClass, "text-md font-bold"])}>{game.description}</div>
               <div className="text-sm font-light text-gray-500">
                 {game.englishDescription}
               </div>

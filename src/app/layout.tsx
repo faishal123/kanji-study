@@ -1,5 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Noto_Serif_JP, Klee_One, New_Tegomin, Shippori_Mincho, Hina_Mincho } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  Noto_Serif_JP,
+  Klee_One,
+  New_Tegomin,
+  Shippori_Mincho,
+  Hina_Mincho,
+  Zen_Old_Mincho,
+  Sawarabi_Mincho
+} from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Providers } from "@/components/atoms/providers";
@@ -20,6 +30,22 @@ const notoSerif = Noto_Serif_JP({
   subsets: ['latin'],
   preload: true
 })
+
+const zenOldMincho = Zen_Old_Mincho({
+  variable: "--font-zen-old-mincho",
+  weight: ['400', '500', '600', '700', '900'],
+  display: 'swap',
+  subsets: ['latin'],
+  preload: true
+});
+
+const sawarabiMincho = Sawarabi_Mincho({
+  variable: "--font-sawarabi-mincho",
+  weight: ['400'],
+  display: 'swap',
+  subsets: ['latin'],
+  preload: true
+});
 
 const kleeOne = Klee_One({
   weight: ['400', '600'],
@@ -77,6 +103,8 @@ export default function RootLayout({
           shipporiMincho.variable,
           hinaMincho.variable,
           notoSerif.variable,
+          sawarabiMincho.variable,
+          zenOldMincho.variable
         )}
       >
         <Providers>{children}</Providers>
