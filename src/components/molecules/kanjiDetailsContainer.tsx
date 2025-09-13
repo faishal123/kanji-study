@@ -1,8 +1,8 @@
 import { katakanaOnly } from "@/constant/katakana";
 import { hiraganaOnly } from "@/constant/hiragana";
-import { Popover, PopoverTrigger, PopoverContent } from "../ui/popover";
 import { useFetchKanjiDetail } from "@/service/kanjiDetails";
 import { Loading } from "../atoms/loading";
+import { PopoverComponent } from "../atoms/popover";
 
 const SingleKanjiDetail = ({
   children,
@@ -64,16 +64,13 @@ const SingleKanji = ({
   showPopover: boolean;
   level: string;
 }) => {
-  return (
-    <Popover open={showPopover ? undefined : false}>
-      <PopoverTrigger asChild>
-        <span className="cursor-pointer">{children}</span>
-      </PopoverTrigger>
-      <PopoverContent className="w-[100vw] max-w-72">
-        <SingleKanjiDetail level={level}>{children}</SingleKanjiDetail>
-      </PopoverContent>
-    </Popover>
-  );
+  return <PopoverComponent
+    trigger={<span className="cursor-pointer">{children}</span>}
+    content={<SingleKanjiDetail level={level}>{children}</SingleKanjiDetail>}
+    showPopover={showPopover ? undefined : false}
+    triggerAsChild
+    contentClassName="w-[100vw] max-w-72"
+  />
 };
 
 export const KanjiDetailsContainer = ({

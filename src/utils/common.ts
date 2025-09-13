@@ -1,4 +1,7 @@
 import { FlashcardQuestionType } from "@/components/organism/flashcardTemplate";
+import { hiraganaAndKatakanaOnly } from "@/constant/common";
+import { hiraganaOnly } from "@/constant/hiragana";
+import { katakanaOnly } from "@/constant/katakana";
 
 export const generateUniqueRandomNumbers = (
   max: number,
@@ -79,3 +82,8 @@ export const useGenerateHiraganaOrKatakanaQuestions = ({
 
   return questions;
 };
+
+export const textOnlyHasHiraganaOrKatakana = (text: string) => {
+  const textSplitted = text.split("")
+  return textSplitted.every(char => hiraganaAndKatakanaOnly.includes(char))
+}
