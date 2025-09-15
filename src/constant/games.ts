@@ -1,18 +1,18 @@
 export const games = {
-  flashcardHiraganaCharacters: {
-    name: "ひらがなフラッシュカード",
-    englishName: "Hiragana Flashcards",
-    description: "ひらがなをフラッシュカードで学びましょう。",
-    englishDescription: "Learn Hiragana through flashcards.",
-    url: "/flashcard-hiragana",
-  },
-  flashcardKatakanaCharacters: {
-    name: "カタカナフラッシュカード",
-    englishName: "Katakana Flashcards",
-    description: "カタカナをフラッシュカードで学びましょう。",
-    englishDescription: "Learn Katakana through flashcards.",
-    url: "/flashcard-katakana",
-  },
+  // flashcardHiraganaCharacters: {
+  //   name: "ひらがなフラッシュカード",
+  //   englishName: "Hiragana Flashcards",
+  //   description: "ひらがなをフラッシュカードで学びましょう。",
+  //   englishDescription: "Learn Hiragana through flashcards.",
+  //   url: "/flashcard-hiragana",
+  // },
+  // flashcardKatakanaCharacters: {
+  //   name: "カタカナフラッシュカード",
+  //   englishName: "Katakana Flashcards",
+  //   description: "カタカナをフラッシュカードで学びましょう。",
+  //   englishDescription: "Learn Katakana through flashcards.",
+  //   url: "/flashcard-katakana",
+  // },
   flashcard: {
     name: "漢字フラッシュカード",
     englishName: "Kanji Flashcard",
