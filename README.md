@@ -5,7 +5,7 @@ Welcome to Kanji Study! 🎉 This is a Next.js project designed to help you lear
 ## Features ✨
 
 -   **Flashcards:** Practice Kanji with interactive flashcards. 🧠
--   **Kanji Details:** Get detailed information about each Kanji, including its meaning, readings, and stroke order. ℹ️
+-   **Kanji Details:** Get detailed information about each Kanji, including its meaning, readings (both in alphabet and hiragana/katakana), and etc. ℹ️
 -   **Easy to Use:** A simple and intuitive interface makes learning Japanese a breeze. 💨
 
 ## Getting Started 🏁
